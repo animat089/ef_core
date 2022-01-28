@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{34CFD82A-48C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.DataAccess", "src\Infrastructure.Data.DataAccess\Infrastructure.Data.DataAccess.csproj", "{BCEC01AC-280D-441E-82C0-C0243F392A3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.DataSetup.Development", "src\Infrastructure.Data.DataSetup.Development\Infrastructure.Data.DataSetup.Development.csproj", "{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{BCEC01AC-280D-441E-82C0-C0243F392A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCEC01AC-280D-441E-82C0-C0243F392A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCEC01AC-280D-441E-82C0-C0243F392A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BCEC01AC-280D-441E-82C0-C0243F392A3A} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
+		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
 	EndGlobalSection
 EndGlobal
