@@ -11,7 +11,7 @@ GO
 BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     CREATE TABLE [Courses] (
         [CourseId] uniqueidentifier NOT NULL DEFAULT (NEWID()),
@@ -23,7 +23,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     CREATE TABLE [Students] (
         [StudentId] uniqueidentifier NOT NULL DEFAULT (NEWID()),
@@ -36,7 +36,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     CREATE TABLE [Enrollments] (
         [EnrollmentId] uniqueidentifier NOT NULL DEFAULT (NEWID()),
@@ -50,7 +50,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'CourseId', N'Credits', N'Title', N'Year') AND [object_id] = OBJECT_ID(N'[Courses]'))
         SET IDENTITY_INSERT [Courses] ON;
@@ -61,7 +61,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'CourseId', N'Credits', N'Title', N'Year') AND [object_id] = OBJECT_ID(N'[Courses]'))
         SET IDENTITY_INSERT [Courses] ON;
@@ -72,7 +72,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'CourseId', N'Credits', N'Title', N'Year') AND [object_id] = OBJECT_ID(N'[Courses]'))
         SET IDENTITY_INSERT [Courses] ON;
@@ -83,22 +83,41 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     CREATE INDEX [IX_Course_Student] ON [Enrollments] ([CourseId], [StudentId]);
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     CREATE INDEX [IX_Enrollments_StudentId] ON [Enrollments] ([StudentId]);
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128205150_dev.1.0.0')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222009_dev.1.0.0')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220128205150_dev.1.0.0', N'6.0.1');
+    VALUES (N'20220128222009_dev.1.0.0', N'6.0.1');
+END;
+GO
+
+COMMIT;
+GO
+
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222040_dev.1.0.1')
+BEGIN
+    ALTER TABLE [Students] ADD [MiddleName] nvarchar(50) NULL;
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222040_dev.1.0.1')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20220128222040_dev.1.0.1', N'6.0.1');
 END;
 GO
 

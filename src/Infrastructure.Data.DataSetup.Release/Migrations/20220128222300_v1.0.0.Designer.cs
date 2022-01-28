@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.DataSetup.Release.Migrations
 {
     [DbContext(typeof(MigrationDbContext))]
-    [Migration("20220128212033_v1.0.0")]
+    [Migration("20220128222300_v1.0.0")]
     partial class v100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Course", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Course", b =>
                 {
                     b.Property<Guid>("CourseId")
                         .ValueGeneratedOnAdd()
@@ -70,7 +70,7 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
                         });
                 });
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Enrollment", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Enrollment", b =>
                 {
                     b.Property<Guid>("EnrollmentId")
                         .ValueGeneratedOnAdd()
@@ -95,7 +95,7 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
                     b.ToTable("Enrollments");
                 });
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Student", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Student", b =>
                 {
                     b.Property<Guid>("StudentId")
                         .ValueGeneratedOnAdd()
@@ -127,15 +127,15 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Enrollment", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Enrollment", b =>
                 {
-                    b.HasOne("AnimatLabs.Infrastructure.Data.DataSetup.Development.Course", "Course")
+                    b.HasOne("AnimatLabs.Infrastructure.Data.DataAccess.Course", "Course")
                         .WithMany("Enrollments")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AnimatLabs.Infrastructure.Data.DataSetup.Development.Student", "Student")
+                    b.HasOne("AnimatLabs.Infrastructure.Data.DataAccess.Student", "Student")
                         .WithMany("Enrollments")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -146,12 +146,12 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
                     b.Navigation("Student");
                 });
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Course", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Course", b =>
                 {
                     b.Navigation("Enrollments");
                 });
 
-            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataSetup.Development.Student", b =>
+            modelBuilder.Entity("AnimatLabs.Infrastructure.Data.DataAccess.Student", b =>
                 {
                     b.Navigation("Enrollments");
                 });

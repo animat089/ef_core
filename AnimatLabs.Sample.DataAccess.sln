@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.DataSet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Data.DataSetup.Release", "src\Infrastructure.Data.DataSetup.Release\Infrastructure.Data.DataSetup.Release.csproj", "{8A89ECF6-C84E-4A9C-B37C-CA2F22545934}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.WithMigration", "src\Application.WithMigration\Application.WithMigration.csproj", "{78998A39-581D-4E4C-ADE9-39502983B3F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.WithoutMigration", "src\Application.WithoutMigration\Application.WithoutMigration.csproj", "{A493518A-735D-4694-887B-E0C6935A104E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +36,20 @@ Global
 		{8A89ECF6-C84E-4A9C-B37C-CA2F22545934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A89ECF6-C84E-4A9C-B37C-CA2F22545934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A89ECF6-C84E-4A9C-B37C-CA2F22545934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78998A39-581D-4E4C-ADE9-39502983B3F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78998A39-581D-4E4C-ADE9-39502983B3F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78998A39-581D-4E4C-ADE9-39502983B3F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78998A39-581D-4E4C-ADE9-39502983B3F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A493518A-735D-4694-887B-E0C6935A104E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A493518A-735D-4694-887B-E0C6935A104E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A493518A-735D-4694-887B-E0C6935A104E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A493518A-735D-4694-887B-E0C6935A104E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BCEC01AC-280D-441E-82C0-C0243F392A3A} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
 		{8B0F8D84-BD20-4D5D-B5EF-C8B6042564D1} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
 		{8A89ECF6-C84E-4A9C-B37C-CA2F22545934} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
+		{78998A39-581D-4E4C-ADE9-39502983B3F0} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
+		{A493518A-735D-4694-887B-E0C6935A104E} = {34CFD82A-48C1-4EDF-84E1-23BD7451F70C}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AnimatLabs.Infrastructure.Data.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace AnimatLabs.Infrastructure.Data.DataSetup.Development;
 public class MigrationDbContext : HogwartsDbContext

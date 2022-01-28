@@ -1,7 +1,7 @@
 ﻿BEGIN TRANSACTION;
 GO
 
-IF EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128210336_dev.1.0.1')
+IF EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222040_dev.1.0.1')
 BEGIN
     DECLARE @var0 sysname;
     SELECT @var0 = [d].[name]
@@ -13,10 +13,10 @@ BEGIN
 END;
 GO
 
-IF EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128210336_dev.1.0.1')
+IF EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220128222040_dev.1.0.1')
 BEGIN
     DELETE FROM [__EFMigrationsHistory]
-    WHERE [MigrationId] = N'20220128210336_dev.1.0.1';
+    WHERE [MigrationId] = N'20220128222040_dev.1.0.1';
 END;
 GO
 
