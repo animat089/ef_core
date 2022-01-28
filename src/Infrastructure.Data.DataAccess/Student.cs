@@ -24,6 +24,13 @@ public class Student
     public string FirstName { get; set; }
 
     /// <summary>
+    /// Middle name for the student
+    /// </summary>
+    /// <example>Doe</example>
+    [MaxLength(50)]
+    public string MiddleName { get; set; }
+
+    /// <summary>
     /// Last name for the student
     /// </summary>
     /// <example>Doe</example>
