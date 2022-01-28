@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Infrastructure.Data;
+namespace Infrastructure.Data.Entities;
 /// <summary>
 /// Class representing the courses
 /// </summary>

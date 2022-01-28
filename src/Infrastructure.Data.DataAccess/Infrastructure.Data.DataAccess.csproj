@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Infrastructure.Data</AssemblyName>
+    <AssemblyName>AnimatLabs.Infrastructure.Data.DataAccess</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <IsPackable>true</IsPackable>

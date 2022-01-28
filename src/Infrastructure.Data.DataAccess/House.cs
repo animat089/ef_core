@@ -1,4 +1,4 @@
-namespace Infrastructure.Data;
+namespace Infrastructure.Data.Entities;
 
 /// <summary>
 /// Enum representing the houses
