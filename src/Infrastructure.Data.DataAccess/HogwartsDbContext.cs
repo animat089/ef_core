@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Data.Entities;
+namespace AnimatLabs.Infrastructure.Data.DataSetup.Development;
 
 /// <summary>
 /// Class representing the DbContext

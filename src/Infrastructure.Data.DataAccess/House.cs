@@ -1,4 +1,4 @@
-namespace Infrastructure.Data.Entities;
+namespace AnimatLabs.Infrastructure.Data.DataSetup.Development;
 
 /// <summary>
 /// Enum representing the houses

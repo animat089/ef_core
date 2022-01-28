@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Infrastructure.Data.Entities;
+namespace AnimatLabs.Infrastructure.Data.DataSetup.Development;
 /// <summary>
 /// Class representing a student
 /// </summary>
