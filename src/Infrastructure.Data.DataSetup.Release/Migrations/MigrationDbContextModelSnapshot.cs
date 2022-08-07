@@ -49,21 +49,21 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
                         {
                             CourseId = new Guid("578c9088-d00d-421f-b418-bb3e305fa32f"),
                             Credits = 5,
-                            Title = "Course1",
+                            Title = "Defense Against the Dark Arts",
                             Year = 1
                         },
                         new
                         {
                             CourseId = new Guid("24e42ce8-6d38-4c5d-88e8-8310935bd886"),
                             Credits = 2,
-                            Title = "Course2",
+                            Title = "Alchemy",
                             Year = 2
                         },
                         new
                         {
                             CourseId = new Guid("680b9bd7-cae9-4126-9b22-2c700fbab340"),
                             Credits = 3,
-                            Title = "Course3",
+                            Title = "Beasts",
                             Year = 3
                         });
                 });
