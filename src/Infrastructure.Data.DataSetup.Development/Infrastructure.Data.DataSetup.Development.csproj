@@ -1,38 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <AssemblyName>AnimatLabs.Infrastructure.Data.DataSetup.Development</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<AssemblyName>AnimatLabs.Infrastructure.Data.DataSetup.Development</AssemblyName>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Infrastructure.Data.DataAccess\Infrastructure.Data.DataAccess.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Infrastructure.Data.DataAccess\Infrastructure.Data.DataAccess.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Scripts\Down\" />
-    <Folder Include="Scripts\Up\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Migrations\20221005112853_dev1.0.2.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Migrations\20221005115753_dev1.0.3_Down.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Migrations\20221005115753_dev1.0.3_Up.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Update="Migrations\20221005112853_dev1.0.2.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Migrations\20221005115753_dev1.0.3_Down.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Migrations\20221005115753_dev1.0.3_Up.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>
