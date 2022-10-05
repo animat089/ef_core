@@ -9,17 +9,17 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Infrastructure.Data.DataSetup.Development.Migrations
+namespace Infrastructure.Data.DataSetup.Release.Migrations
 {
     [DbContext(typeof(HogwartsDbContext))]
-    [Migration("20220128222040_dev.1.0.1")]
-    partial class dev101
+    [Migration("20221005112827_v1.0.0")]
+    partial class v100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -51,21 +51,21 @@ namespace Infrastructure.Data.DataSetup.Development.Migrations
                         {
                             CourseId = new Guid("578c9088-d00d-421f-b418-bb3e305fa32f"),
                             Credits = 5,
-                            Title = "Course1",
+                            Title = "Defense Against the Dark Arts",
                             Year = 1
                         },
                         new
                         {
                             CourseId = new Guid("24e42ce8-6d38-4c5d-88e8-8310935bd886"),
                             Credits = 2,
-                            Title = "Course2",
+                            Title = "Alchemy",
                             Year = 2
                         },
                         new
                         {
                             CourseId = new Guid("680b9bd7-cae9-4126-9b22-2c700fbab340"),
                             Credits = 3,
-                            Title = "Course3",
+                            Title = "Beasts",
                             Year = 3
                         });
                 });

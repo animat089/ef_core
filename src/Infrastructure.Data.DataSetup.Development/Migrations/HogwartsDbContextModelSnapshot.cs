@@ -4,7 +4,6 @@ using AnimatLabs.Infrastructure.Data.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -12,14 +11,13 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.DataSetup.Development.Migrations
 {
     [DbContext(typeof(HogwartsDbContext))]
-    [Migration("20220128222009_dev.1.0.0")]
-    partial class dev100
+    partial class HogwartsDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -51,21 +49,21 @@ namespace Infrastructure.Data.DataSetup.Development.Migrations
                         {
                             CourseId = new Guid("578c9088-d00d-421f-b418-bb3e305fa32f"),
                             Credits = 5,
-                            Title = "Course1",
+                            Title = "Defense Against the Dark Arts",
                             Year = 1
                         },
                         new
                         {
                             CourseId = new Guid("24e42ce8-6d38-4c5d-88e8-8310935bd886"),
                             Credits = 2,
-                            Title = "Course2",
+                            Title = "Alchemy",
                             Year = 2
                         },
                         new
                         {
                             CourseId = new Guid("680b9bd7-cae9-4126-9b22-2c700fbab340"),
                             Credits = 3,
-                            Title = "Course3",
+                            Title = "Beasts",
                             Year = 3
                         });
                 });
@@ -112,6 +110,10 @@ namespace Infrastructure.Data.DataSetup.Development.Migrations
 
                     b.Property<string>("LastName")
                         .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MiddleName")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 

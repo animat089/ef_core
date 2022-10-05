@@ -1,0 +1,13 @@
+﻿BEGIN TRANSACTION;
+GO
+
+IF EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20221005112853_dev1.0.2')
+BEGIN
+    DELETE FROM [__EFMigrationsHistory]
+    WHERE [MigrationId] = N'20221005112853_dev1.0.2';
+END;
+GO
+
+COMMIT;
+GO
+

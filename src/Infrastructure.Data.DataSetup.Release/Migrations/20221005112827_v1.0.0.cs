@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -68,17 +67,17 @@ namespace Infrastructure.Data.DataSetup.Release.Migrations
             migrationBuilder.InsertData(
                 table: "Courses",
                 columns: new[] { "CourseId", "Credits", "Title", "Year" },
-                values: new object[] { new Guid("24e42ce8-6d38-4c5d-88e8-8310935bd886"), 2, "Course2", 2 });
+                values: new object[] { new Guid("24e42ce8-6d38-4c5d-88e8-8310935bd886"), 2, "Alchemy", 2 });
 
             migrationBuilder.InsertData(
                 table: "Courses",
                 columns: new[] { "CourseId", "Credits", "Title", "Year" },
-                values: new object[] { new Guid("578c9088-d00d-421f-b418-bb3e305fa32f"), 5, "Course1", 1 });
+                values: new object[] { new Guid("578c9088-d00d-421f-b418-bb3e305fa32f"), 5, "Defense Against the Dark Arts", 1 });
 
             migrationBuilder.InsertData(
                 table: "Courses",
                 columns: new[] { "CourseId", "Credits", "Title", "Year" },
-                values: new object[] { new Guid("680b9bd7-cae9-4126-9b22-2c700fbab340"), 3, "Course3", 3 });
+                values: new object[] { new Guid("680b9bd7-cae9-4126-9b22-2c700fbab340"), 3, "Beasts", 3 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Course_Student",

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AnimatLabs.Infrastructure.Data.DataAccess;
+
 /// <summary>
 /// Class representing a student
 /// </summary>

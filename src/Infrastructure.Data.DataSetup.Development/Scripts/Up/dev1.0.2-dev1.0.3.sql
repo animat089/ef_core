@@ -1,7 +1,7 @@
 ﻿BEGIN TRANSACTION;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220807152446_dev.1.0.3')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20221005115753_dev1.0.3')
 BEGIN
     EXEC(N'CREATE OR ALTER PROCEDURE GetAllCourses
     AS
@@ -12,7 +12,7 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220807152446_dev.1.0.3')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20221005115753_dev1.0.3')
 BEGIN
     EXEC(N'CREATE OR ALTER PROCEDURE GetAllStudents
     AS
@@ -23,10 +23,10 @@ BEGIN
 END;
 GO
 
-IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20220807152446_dev.1.0.3')
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20221005115753_dev1.0.3')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20220807152446_dev.1.0.3', N'6.0.7');
+    VALUES (N'20221005115753_dev1.0.3', N'6.0.9');
 END;
 GO
 

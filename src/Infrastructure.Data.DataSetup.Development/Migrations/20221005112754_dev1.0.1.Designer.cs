@@ -9,17 +9,17 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Infrastructure.Data.DataSetup.Release.Migrations
+namespace Infrastructure.Data.DataSetup.Development.Migrations
 {
     [DbContext(typeof(HogwartsDbContext))]
-    [Migration("20220818190301_v1.0.2")]
-    partial class v102
+    [Migration("20221005112754_dev1.0.1")]
+    partial class dev101
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
