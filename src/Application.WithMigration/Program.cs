@@ -6,7 +6,7 @@ var connectionString = "Server=localhost;Initial Catalog=HogwartsDb;Integrated S
 var migrationAssemblyName = "AnimatLabs.Infrastructure.Data.DataSetup.Release";
 var contextOptions = new DbContextOptionsBuilder<HogwartsDbContext>().UseSqlServer(
     connectionString, x => x.MigrationsAssembly(migrationAssemblyName)).Options;
-using var dbContext = new HogwartsDbContext(contextOptions);
+using (var dbContext = new HogwartsDbContext(contextOptions))
 {
     dbContext.Database.Migrate();
     Console.WriteLine("All Courses from EF Model:");
